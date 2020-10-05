@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#999900</color>
+    <color name="colorAccent">#ffffff</color>
+
+    <!-- colors for tab and screent text -->
+
+    <color name="tab_indicator_grey">#676060</color>
+    <color name="intro_title_color">#FFFFFF</color>
+    <color name="intro_description_color">#EEEEEE</color>
+
+    <!-- colors button -->
+    <color name="colorButton">#999900</color>
+
 </resources>
