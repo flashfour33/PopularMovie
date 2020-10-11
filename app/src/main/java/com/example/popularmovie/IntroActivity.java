@@ -12,6 +12,7 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -62,9 +63,9 @@ public class IntroActivity extends AppCompatActivity {
         // fill list screen
 
         final List<ScreenItem> mList = new ArrayList<>();
-        mList.add(new ScreenItem("POPULAR MOVIE","Anda dapat melihat berbagai macam film-film populer dari berbagai mancanegara. Serta anda juga dapat melihat sinopsis dari film tersebut",R.drawable.img1));
-        mList.add(new ScreenItem("RATING MOVIE","Selain dapat membaca sinopsis, anda juga dapat melihat rating dari film yang akan ditonton",R.drawable.img2));
-        mList.add(new ScreenItem("TRAILER MOVIE","Sebelum anda menonton film yang akan ditonton, anda dapat melihat cuplikan trailer dari film yang akan anda tonton",R.drawable.img3));
+        mList.add(new ScreenItem("JUDUL","Isi Septiani Aulia Putri, Isi Septiani Aulia Putri, Isi Septiani Aulia Putri, Isi Septiani Aulia Putri",R.drawable.img1));
+        mList.add(new ScreenItem("JUDUL","Isi Septiani Aulia Putri, Isi Septiani Aulia Putri, Isi Septiani Aulia Putri, Isi Septiani Aulia Putri",R.drawable.img2));
+        mList.add(new ScreenItem("JUDUL","Isi Septiani Aulia Putri, Isi Septiani Aulia Putri, Isi Septiani Aulia Putri, Isi Septiani Aulia Putri",R.drawable.img3));
 
         // setup viewpager
         screenPager =findViewById(R.id.screen_viewpager);
