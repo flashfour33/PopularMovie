@@ -73,7 +73,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
-                                android:drawableStart="@drawable/ic_dtl_time"
+                                android:drawableStart="@drawable/ic_alarm"
                                 android:drawablePadding="10dp"
                                 android:drawableTint="@color/colorPrimary"
                                 android:gravity="center"

@@ -3,5 +3,11 @@
     <string name="about">About</string>
     <string name="flashfour33">Flashfour33</string>
     <string name="judul">FLASH FOUR</string>
+    <string name="alarm_off">Alarm Off</string>
+    <string name="alarm_on">Alarm On</string>
+    <string name="alarm_on_toast">Movie Alarm On!</string>
+    <string name="alarm_off_toast">Movie Alarm Off!</string>
+    <string name="notification_title">Dont Forget To Watching The Movie</string>
+    <string name="notification_text">You can open your application to know about your favorite movie</string>
 
 </resources>
