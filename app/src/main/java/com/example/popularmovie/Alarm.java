@@ -76,7 +76,7 @@ public class Alarm extends AppCompatActivity {
                     public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                         String toastMessage;
                         if (isChecked) {
-                            long repeatInterval = 60*1000;
+                            long repeatInterval = 86400*1000;
                             long triggerTime = SystemClock.elapsedRealtime()
                                     + repeatInterval;
                             // If the Toggle is turned on, set the repeating alarm with

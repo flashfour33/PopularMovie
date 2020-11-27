@@ -9,5 +9,6 @@
     <string name="alarm_off_toast">Movie Alarm Off!</string>
     <string name="notification_title">Dont Forget To Watching The Movie</string>
     <string name="notification_text">You can open your application to know about your favorite movie</string>
+    <string name="alarm_notif">Set Up Your Alarm If You Want To Get The Notification</string>
 
 </resources>
