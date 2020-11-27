@@ -13,4 +13,6 @@
     <!-- colors button -->
     <color name="colorButton">#999900</color>
 
+    <!-- colors cardview -->
+    <color name="colorCard">#800000</color>
 </resources>
