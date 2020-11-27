@@ -4,8 +4,10 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -22,16 +24,20 @@ import org.json.JSONObject;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
+    TextView tvToday;
+    String hariIni;
     private String TAG = MainActivity.class.getSimpleName();
 
     private ProgressDialog pDialog;
     private RecyclerView mRecyclerView;
+    RecyclerView.LayoutManager layoutManager;
     //private ListView lv;
     private MovieAdapter movieAdapter;
 
@@ -73,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),Favorite.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.about:
-                        startActivity(new Intent(getApplicationContext(),About.class));
+                    case R.id.alarm:
+                        startActivity(new Intent(getApplicationContext(), Alarm.class));
                         overridePendingTransition(0,0);
                         return true;
                 }
@@ -82,6 +88,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        tvToday = findViewById(R.id.tvDate);
+
+        //get Time Now
+        Date dateNow = Calendar.getInstance().getTime();
+        hariIni = (String) DateFormat.format("EEEE", dateNow);
+        getToday();
+
+    }
+
+    private void getToday() {
+        Date date = Calendar.getInstance().getTime();
+        String tanggal = (String) DateFormat.format("d MMMM yyyy", date);
+        String formatFix = hariIni + ", " + tanggal;
+        tvToday.setText(formatFix);
     }
 
     /**

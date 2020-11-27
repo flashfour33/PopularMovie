@@ -33,8 +33,8 @@ public class Favorite extends AppCompatActivity {
                         return true;
                     case R.id.favorite:
                         return true;
-                    case R.id.about:
-                        startActivity(new Intent(getApplicationContext(),About.class));
+                    case R.id.alarm:
+                        startActivity(new Intent(getApplicationContext(), Alarm.class));
                         overridePendingTransition(0,0);
                         return true;
                 }

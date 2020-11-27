@@ -9,18 +9,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class About extends AppCompatActivity {
+public class Alarm extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+        setContentView(R.layout.activity_alarm);
 
         //Initialize And Assign Variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         //Set Home Selected
-        bottomNavigationView.setSelectedItemId(R.id.about);
+        bottomNavigationView.setSelectedItemId(R.id.alarm);
 
         //Perform ItemSelectedLIstener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -35,7 +35,7 @@ public class About extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),Favorite.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.about:
+                    case R.id.alarm:
                         return true;
                 }
                 return false;
