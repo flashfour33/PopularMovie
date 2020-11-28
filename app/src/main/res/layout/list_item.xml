@@ -4,7 +4,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp">
+    android:layout_margin="8dp"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -29,8 +30,9 @@
             android:paddingTop="6dip"
             android:paddingBottom="2dip"
             android:paddingLeft="6dip"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="16sp"
+            android:textColor="@color/colorPrimary"
+            android:background="@color/colorCard"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
         <TextView
@@ -40,8 +42,9 @@
             android:layout_below="@id/title"
             android:paddingBottom="2dip"
             android:paddingLeft="6dip"
-            android:textColor="@color/colorAccent"
-            android:layout_marginTop="6dp"/>
+            android:textColor="@color/colorCard"
+            android:background="@color/colorCard"
+            android:layout_marginTop="0dp"/>
 
         <!--<TextView
             android:id="@+id/rating"
