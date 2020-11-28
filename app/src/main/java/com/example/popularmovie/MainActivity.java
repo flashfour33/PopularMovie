@@ -39,12 +39,12 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     RecyclerView.LayoutManager layoutManager;
     //private ListView lv;
+
     private MovieAdapter movieAdapter;
 
     private static String url = "https://api.themoviedb.org/3/movie/popular?api_key=0dde3e9896a8c299d142e214fcb636f8&language=en-US&page=1";
     private static String url_img = "https://image.tmdb.org/t/p/w500";
 
-    //ArrayList<HashMap<String, String>> movieList;
     private final List<Map<String, String>> movieList  = new ArrayList<Map<String, String>>();
     public static final String MOVIE_ID = "movie_id";
 
@@ -53,10 +53,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //movieList = new ArrayList<>();
-
-        //lv = (ListView) findViewById(R.id.list);
 
         mRecyclerView = findViewById(R.id.list);
 
@@ -126,14 +122,12 @@ public class MainActivity extends AppCompatActivity {
 
             // Making a request to url and getting response
             String jsonStr = sh.makeServiceCall(url);
-            //String imgMovie = sh.makeServiceCall(url_img);
 
             Log.e(TAG, "Response from url: " + jsonStr);
 
             if (jsonStr != null) {
                 try {
                     JSONObject jsonObj = new JSONObject(jsonStr);
-                    //JSONObject jsonObj = new JSONObject(jsonStr.substring(jsonStr.indexOf("{"), jsonStr.lastIndexOf("}") + 1));
                     // Getting JSON Array node
                     JSONArray movies = jsonObj.getJSONArray("results");
 
@@ -153,15 +147,11 @@ public class MainActivity extends AppCompatActivity {
                         String votes = c.getString("vote_count");
                         String release = c.getString("release_date");
 
-
-
                         // change date format
                         SimpleDateFormat df= new SimpleDateFormat("yyyy-MM-dd");
                         Date dateFormated = df.parse(release);
                         df.applyPattern("dd M yyyy");
                         String date = df.format(dateFormated);
-
-                        Log.d("cek","vote : " + votes + "; release : " + release + "; rating : " + date);
 
                         HashMap<String, String> movie = new HashMap<>();
 
@@ -215,14 +205,7 @@ public class MainActivity extends AppCompatActivity {
             // Dismiss the progress dialog
             if (pDialog.isShowing())
                 pDialog.dismiss();
-            /**
-             * Updating parsed JSON data into ListView
-             * */
-            /*ListAdapter adapter = new SimpleAdapter(
-                    MainActivity.this, movieList,
-                    R.layout.list_item, new String[]{"original_title", "title",
-                    "overview"}, new int[]{R.id.title,
-                    R.id.title, R.id.overview});*/
+
 
             movieAdapter = new MovieAdapter(MainActivity.this, movieList);
 

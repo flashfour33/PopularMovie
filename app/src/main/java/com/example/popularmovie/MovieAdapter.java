@@ -14,12 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
-import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static androidx.core.content.ContextCompat.startActivity;
 
 public class MovieAdapter extends
         RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
@@ -35,8 +33,8 @@ public class MovieAdapter extends
     class MovieViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener  {
         public final TextView movieTitle;
         public final TextView movieOriTitle;
-        public final TextView movieOverview;
         public final ImageView movieBackdrop;
+        public final TextView movieRating;
         final MovieAdapter mAdapter;
 
         public MovieViewHolder(View itemView, MovieAdapter adapter) {
@@ -44,8 +42,8 @@ public class MovieAdapter extends
             //movieItemView = itemView.findViewById(R.id.list);
             movieTitle = itemView.findViewById(R.id.title);
             movieOriTitle = itemView.findViewById(R.id.original_title);
-            movieOverview = itemView.findViewById(R.id.overview);
             movieBackdrop = itemView.findViewById(R.id.movie_backdrop);
+            movieRating = itemView.findViewById(R.id.rating);
             this.mAdapter = adapter;
             itemView.setOnClickListener(this);
         }
@@ -69,10 +67,8 @@ public class MovieAdapter extends
             detailMovie.put("date",data.get("date"));
 
             String id = (String) data.get("id");
-            Log.d("check","id : "+ id);
 
             Intent intent = new Intent(view.getContext(), DetailActivity.class);
-            //String message = mMessageEditText.getText().toString();
             intent.putExtra("id",id);
             intent.putExtra("mapDetail", detailMovie);
             view.getContext().startActivity(intent);
@@ -90,23 +86,26 @@ public class MovieAdapter extends
     @Override
     public void onBindViewHolder(@NonNull MovieViewHolder holder, int position) {
         Map<String, ?> mCurrent = mMovieList.get(position);
-        Log.d("questionIsBranchedOrNot","position : " + position + "title : " + mCurrent.get("title"));
 
         String oriTitle = (String) mCurrent.get("original_title");
         String title = (String) mCurrent.get("title");
         String urlBackdrop = (String) mCurrent.get("backdrop");
-
-        if(title.equals(oriTitle)){
-            oriTitle = "";
-        }
+        String rating = (String) mCurrent.get("rating");
+        //String ratingStr = "Rating : " + rating;
 
         holder.movieTitle.setText(title);
-        holder.movieOriTitle.setText(oriTitle);
+        if(title.equals(oriTitle)){
+            holder.movieOriTitle.setVisibility(View.GONE);
+        }
+        else {
+            holder.movieOriTitle.setText(oriTitle);
+        }
+       // holder.movieRating.setText(rating);
+        Log.d("check!!! ","rating : "+rating);
+
         Glide.with(holder.movieBackdrop.getContext())
                 .load(urlBackdrop)
                 .into(holder.movieBackdrop);
-        //holder.movieBackdrop.setImageResource(Integer.parseInt(urlBackdrop));
-
     }
 
     @Override
