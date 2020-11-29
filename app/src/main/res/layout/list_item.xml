@@ -46,16 +46,16 @@
             android:background="@color/colorCard"
             android:layout_marginTop="0dp"/>
 
-        <!--<TextView
+        <TextView
             android:id="@+id/rating"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/original_title"
-            android:paddingBottom="2dip"
+            android:layout_below="@+id/title"
+            android:background="@color/colorCard"
             android:paddingLeft="6dip"
-            android:textColor="@color/colorAccent"
-            android:layout_marginTop="6dp"
-            />-->
+            android:paddingBottom="2dip"
+            android:textSize="18sp"
+            android:textColor="@color/colorAccent" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

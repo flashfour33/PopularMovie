@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#ffffff</color>
-    <color name="colorPrimaryDark">#999900</color>
+    <color name="colorPrimaryDark">#FFDF00</color>
     <color name="colorAccent">#ffffff</color>
 
     <!-- colors for tab and screent text -->

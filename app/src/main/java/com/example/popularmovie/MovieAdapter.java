@@ -91,7 +91,6 @@ public class MovieAdapter extends
         String title = (String) mCurrent.get("title");
         String urlBackdrop = (String) mCurrent.get("backdrop");
         String rating = (String) mCurrent.get("rating");
-        //String ratingStr = "Rating : " + rating;
 
         holder.movieTitle.setText(title);
         if(title.equals(oriTitle)){
@@ -100,7 +99,7 @@ public class MovieAdapter extends
         else {
             holder.movieOriTitle.setText(oriTitle);
         }
-       // holder.movieRating.setText(rating);
+        holder.movieRating.setText(rating);
         Log.d("check!!! ","rating : "+rating);
 
         Glide.with(holder.movieBackdrop.getContext())
