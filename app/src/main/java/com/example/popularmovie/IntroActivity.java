@@ -63,9 +63,9 @@ public class IntroActivity extends AppCompatActivity {
         // fill list screen
 
         final List<ScreenItem> mList = new ArrayList<>();
-        mList.add(new ScreenItem("POPULAR MOVIE","Anda dapat melihat berbagai jenis film-film populer dari berbagai negara. Serta anda juga dapat melihat sinopsi dari film-film tersebut",R.drawable.img1));
-        mList.add(new ScreenItem("RATING MOVIE","Selain anda dapat membaca sinopsis, disini anda juga dapat melihat rating dari tiap-tiap film yang akan anda tonton",R.drawable.img2));
-        mList.add(new ScreenItem("DESCRIPTION MOVIE","Sebelum anda menonton film yang akan ditonton, anda dapat meembaca sinopsis film yang akan anda tonton terlebih dahulu",R.drawable.img3));
+        mList.add(new ScreenItem("POPULAR MOVIE","Melihat berbagai jenis film-film populer dari berbagai negara.",R.drawable.img1));
+        mList.add(new ScreenItem("RATING MOVIE","Melihat rating dari tiap-tiap film yang akan anda tonton",R.drawable.img2));
+        mList.add(new ScreenItem("DESCRIPTION MOVIE","Membaca sinopsis film yang akan anda tonton terlebih dahulu",R.drawable.img3));
 
         // setup viewpager
         screenPager =findViewById(R.id.screen_viewpager);

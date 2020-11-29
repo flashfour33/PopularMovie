@@ -44,6 +44,7 @@
         android:lineSpacingExtra="16dp"
         android:text="TextView"
         android:textColor="#FFFF"
+        android:textSize="25dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
