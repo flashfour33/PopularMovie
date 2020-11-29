@@ -1,5 +1,6 @@
 package com.example.popularmovie;
 
+import androidx.appcompat.widget.Toolbar;
 import android.app.AlarmManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -13,6 +14,7 @@ import android.widget.CompoundButton;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,11 +25,16 @@ public class Alarm extends AppCompatActivity {
     private static final String PRIMARY_CHANNEL_ID =
             "primary_notification_channel";
     private NotificationManager mNotificationManager;
+    Toolbar tbAlarm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm);
+
+        tbAlarm = findViewById(R.id.tbAlarm);
+        tbAlarm.setTitle("Alarm");
+
 
         //Initialize And Assign Variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -44,8 +51,8 @@ public class Alarm extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
-                    case R.id.favorite:
-                        startActivity(new Intent(getApplicationContext(), Favorite.class));
+                    case R.id.about:
+                        startActivity(new Intent(getApplicationContext(), About.class));
                         overridePendingTransition(0, 0);
                         return true;
                     case R.id.alarm:

@@ -71,8 +71,8 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.home:
                         return true;
-                    case R.id.favorite:
-                        startActivity(new Intent(getApplicationContext(),Favorite.class));
+                    case R.id.about:
+                        startActivity(new Intent(getApplicationContext(), About.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.alarm:

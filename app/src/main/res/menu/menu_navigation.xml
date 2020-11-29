@@ -8,13 +8,14 @@
         android:icon="@drawable/ic_home"/>
 
     <item
-        android:id="@+id/favorite"
-        android:title="Favorite"
-        android:icon="@drawable/ic_favorite"/>
-
-    <item
         android:id="@+id/alarm"
         android:title="Alarm"
         android:icon="@drawable/ic_alarm"/>
+
+    <item
+        android:id="@+id/about"
+        android:title="About"
+        android:icon="@drawable/ic_about"/>
+
 
 </menu>

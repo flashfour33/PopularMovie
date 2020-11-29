@@ -1,6 +1,7 @@
 package com.example.popularmovie;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -21,12 +22,19 @@ public class DetailActivity extends AppCompatActivity {
     private final Map<String, String> movieDetail = new HashMap<String, String>();
     private static String url = "https://api.themoviedb.org/3/movie/popular?api_key=0dde3e9896a8c299d142e214fcb636f8&language=en-US&page=1";
     private static String url_img = "https://image.tmdb.org/t/p/w500";
+    Toolbar tbDetailMovie;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+
+        tbDetailMovie = findViewById(R.id.tbDetailMovie);
+        tbDetailMovie.setTitle("Detail Movie");
+        setSupportActionBar(tbDetailMovie);
+        assert getSupportActionBar() != null;
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
