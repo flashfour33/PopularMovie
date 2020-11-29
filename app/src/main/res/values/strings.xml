@@ -3,16 +3,20 @@
     <string name="about">About</string>
     <string name="flashfour33">Flashfour33</string>
     <string name="judul">FLASH FOUR</string>
+
+    //alarm
     <string name="alarm_off">Movie Alarm Off</string>
     <string name="alarm_on">Movie Alarm On</string>
     <string name="alarm_on_toast">Movie Alarm On!</string>
     <string name="alarm_off_toast">Movie Alarm Off!</string>
     <string name="notification_title">Dont Forget To Watching The Movie</string>
     <string name="notification_text">You can open your application to know about your favorite movie</string>
-    <string name="alarm_notif">Set Up Your Alarm If You Want To Get The Notification</string>
+    <string name="alarm_notif">Set Up Your Alarm</string>
     <string name="name_alarm">Alarm</string>
-    <string name="description">Applikasi Popular Movie By FlashFour</string>
-    <string name="description2">1. Indri Dwi Damayanti (09031281823043)</string>
-    <string name="description3">2. Septiani Aulia Putri (09031281823141)</string>
+    <string name="description">Aplikasi Popular Movie By FlashFour</string>
+    <string name="description2">1. Tiara Dewangga (09031381823095)</string>
+    <string name="description3">2. Indri Dwi Damayanti (09031281823043)</string>
+    <string name="description4">3. Septiani Aulia Putri (09031281823141)</string>
+    <string name="description5">4. Siti Raisah Adilah (09031381823110)</string>
 
 </resources>

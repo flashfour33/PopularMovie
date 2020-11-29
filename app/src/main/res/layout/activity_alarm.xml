@@ -21,39 +21,38 @@
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/upper_navigation"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-4dp" >
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="145dp"
-            android:layout_height="44dp"
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="12dp"
-            android:text="@string/name_alarm"
-            android:textColor="#000000"
-            android:textColorHighlight="#FFC781"
-            android:textSize="40sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="150dp"
-            android:layout_marginEnd="8dp" />
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbDetailWisata"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <ToggleButton
+            android:id="@+id/alarmToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="@string/alarm_off"
+            android:textOn="@string/alarm_on"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.693"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.273" />
 
         <TextView
             android:id="@+id/textView"
@@ -64,23 +63,77 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintHorizontal_bias="0.037"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.126" />
+            app:layout_constraintVertical_bias="0.28" />
 
-        <ToggleButton
-            android:id="@+id/alarmToggle"
+        <TextView
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textOff="@string/alarm_off"
-            android:textOn="@string/alarm_on"
+            android:layout_marginTop="4dp"
+            android:paddingTop="10dp"
+            android:text="@string/description2"
+            android:textColor="@color/colorPrimary"
+            android:textColorHighlight="@color/colorPrimaryDark"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.472"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="@string/description3"
+            android:textColor="@color/colorPrimary"
+            android:textColorHighlight="@color/colorPrimaryDark"
+            android:textSize="15dp"
+            android:textStyle="italic"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.46"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.027" />
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.013" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="@string/description4"
+            android:textColor="@color/colorPrimary"
+            android:textColorHighlight="@color/colorPrimaryDark"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintVertical_bias="0.006" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="@string/description5"
+            android:textColor="@color/colorPrimary"
+            android:textColorHighlight="@color/colorPrimaryDark"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.462"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textView3"
@@ -89,37 +142,14 @@
             android:text="@string/description"
             android:textColor="@color/colorPrimary"
             android:textColorHighlight="@color/colorPrimaryDark"
+            android:textSize="15dp"
             android:textStyle="italic"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.471"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/alarmToggle"
-            app:layout_constraintVertical_bias="0.059"
-            tools:layout_editor_absoluteX="91dp" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/description2"
-            android:textColor="@color/colorPrimary"
-            android:textColorHighlight="@color/colorPrimaryDark"
-            android:textStyle="italic"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/alarmToggle"
-            app:layout_constraintVertical_bias="0.126"
-            tools:layout_editor_absoluteX="77dp" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/description3"
-            android:textColor="@color/colorPrimary"
-            android:textColorHighlight="@color/colorPrimaryDark"
-            android:textStyle="italic"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/alarmToggle"
-            app:layout_constraintVertical_bias="0.159"
-            tools:layout_editor_absoluteX="77dp" />
+            app:layout_constraintVertical_bias="0.071" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
